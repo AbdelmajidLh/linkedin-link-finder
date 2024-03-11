@@ -1,6 +1,7 @@
 import logging
 from scripts import excel_checker
 from scripts import url_finder
+import pandas as pd
 
 def main():
     config_file_path = "conf/config.json"  # Chemin vers votre fichier de configuration
@@ -21,6 +22,11 @@ def main():
             
             # Afficher le DataFrame avec les liens LinkedIn
             print(df_with_links)
+            
+            # Enregistrer le DataFrame avec les liens LinkedIn dans un fichier Excel
+            output_file_path = "linkedin_links.xlsx"  # Chemin vers le fichier de sortie
+            df_with_links.to_excel(output_file_path, index=False)
+            print(f"Les résultats ont été enregistrés dans : {output_file_path}")
         else:
             logging.error("Chemin du fichier Excel non spécifié dans le fichier de configuration.")
     except Exception as e:
