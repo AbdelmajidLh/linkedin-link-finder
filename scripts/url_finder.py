@@ -1,7 +1,8 @@
 import pandas as pd
 from googlesearch import search
+import time
 
-def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise):
+def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise, max_retries=3):
     queries = [
         f"{nom} {fonction} {plateforme_ou_pole} {entreprise} LinkedIn",
         f"{nom} {plateforme_ou_pole} {entreprise} LinkedIn",
@@ -9,10 +10,17 @@ def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise):
         f"{nom} LinkedIn"
     ]
     for query in queries:
-        for url in search(query, num=1, stop=1):
-            if 'linkedin.com/in' in url:
-                return url
+        for _ in range(max_retries):
+            try:
+                for url in search(query, num=1, stop=1):
+                    if 'linkedin.com/in' in url:
+                        return url
+            except Exception as e:
+                print(f"Erreur lors de la recherche de l'URL LinkedIn pour {nom}: {e}")
+                print("Réessai dans quelques secondes...")
+                time.sleep(5)  # Attendre quelques secondes avant de réessayer
     return None
+
 
 def generate_linkedin_urls(data):
     if isinstance(data, pd.DataFrame):
