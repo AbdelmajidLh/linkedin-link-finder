@@ -2,6 +2,7 @@ import logging
 from scripts import excel_checker
 from scripts import url_finder
 
+
 def main():
     config_file_path = "conf/config.json"  # Chemin vers votre fichier de configuration
 
