@@ -1,5 +1,5 @@
-from googlesearch import search
 import pandas as pd
+from googlesearch import search
 
 def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise):
     queries = [
@@ -15,6 +15,9 @@ def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise):
     return None
 
 def generate_linkedin_urls(data):
-    df = pd.DataFrame(data)
-    df['LinkedIn'] = df.apply(lambda row: find_linkedin_url(row['Nom'], row['Fonction'], row['Plateforme ou pôle'], row['Entreprise']), axis=1)
-    return df
+    if isinstance(data, pd.DataFrame):
+        data = data.copy()  # Copie des données pour éviter de modifier les données d'origine
+        data['LinkedIn'] = data.apply(lambda row: find_linkedin_url(row['Nom'], row['Fonction'], row['Plateforme ou pôle'], row['Entreprise']), axis=1)
+        return data
+    else:
+        raise ValueError("Les données doivent être un DataFrame.")

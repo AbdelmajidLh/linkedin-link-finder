@@ -42,6 +42,8 @@ def check_excel_columns(excel_file_path):
         raise ValueError(f"Les colonnes suivantes sont manquantes dans le fichier Excel : {', '.join(missing_columns)}")
     
     logging.info("Toutes les colonnes requises sont présentes dans le fichier Excel.")
+    
+    return df  # Retourner le DataFrame même si aucune colonne n'est manquante
 
 #if __name__ == "__main__":
 #    excel_file_path = "data/file.xlsx"  # Chemin vers votre fichier Excel
