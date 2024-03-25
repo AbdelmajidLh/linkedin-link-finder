@@ -3,6 +3,7 @@ from scripts import excel_checker, url_finder
 import pandas as pd
 import math
 from concurrent.futures import ThreadPoolExecutor
+import time
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -23,6 +24,7 @@ def process_chunk(chunk):
 
 # Fonction principale
 def main():
+    start_time = time.time()  # Démarrer le chronomètre
     logging.info("Début du traitement du fichier Excel.")
     config_file_path = "conf/config.json"
     try:
@@ -42,6 +44,9 @@ def main():
             logging.info(f"Les résultats ont été enregistrés dans : {output_file_path}")
     except Exception as e:
         logging.exception("Une erreur est survenue :")
+    end_time = time.time()  # Arrêter le chronomètre
+    execution_time = end_time - start_time  # Calculer le temps d'exécution
+    logging.info(f"Temps d'exécution du programme : {execution_time/60} minutes.")
 
 if __name__ == "__main__":
     main()
