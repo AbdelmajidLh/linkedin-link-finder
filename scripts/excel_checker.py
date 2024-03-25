@@ -8,16 +8,19 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # load config
 def load_config(config_file_path):
+    logging.info(f"Chargement du fichier de configuration : {config_file_path}")
     try:
         with open(config_file_path, 'r') as config_file:
             config_data = json.load(config_file)
+            logging.info("Fichier de configuration chargé avec succès.")
             return config_data
     except Exception as e:
         logging.error(f"Erreur lors de la lecture du fichier de configuration : {e}")
         raise
 
-# load and check axcel file
+# load and check excel file
 def check_excel_columns(excel_file_path):
+    logging.info(f"Vérification du fichier Excel : {excel_file_path}")
     # Vérifier si le fichier Excel existe
     if not os.path.exists(excel_file_path):
         logging.error(f"Le fichier Excel {excel_file_path} n'existe pas.")
@@ -44,11 +47,3 @@ def check_excel_columns(excel_file_path):
     logging.info("Toutes les colonnes requises sont présentes dans le fichier Excel.")
     
     return df  # Retourner le DataFrame même si aucune colonne n'est manquante
-
-#if __name__ == "__main__":
-#    excel_file_path = "data/file.xlsx"  # Chemin vers votre fichier Excel
-#
-#    try:
-#        check_excel_columns(excel_file_path)
-#    except Exception as e:
-#        logging.exception("Une erreur est survenue :")
