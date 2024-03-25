@@ -1,6 +1,6 @@
 {
-    "excel_file_path": "data/file.xlsx",
-    "output_file_path" : "res/demo_res.xlsx",
-    "chunk_size" : 10
+    "excel_file_path": "data/file_all.xlsx",
+    "output_file_path" : "res/res_all.xlsx",
+    "chunk_size" : 20
 }
   

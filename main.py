@@ -13,35 +13,39 @@ def chunk_dataframe(df, chunk_size):
     return chunks
 
 def main():
-    config_file_path = "conf/config.json"  # Chemin vers votre fichier de configuration
-    #chunk_size = 10  # Taille des chunks pour le découpage du DataFrame
+    config_file_path = "conf/config.json"
 
     try:
         config_data = excel_checker.load_config(config_file_path)
         excel_file_path = config_data.get("excel_file_path")
+        output_file_path = config_data.get("output_file_path")
         if excel_file_path:
-            # Appel de la fonction pour vérifier les colonnes Excel et obtenir les données sous forme de DataFrame
+            # Charger le fichier Excel et vérifier ses colonne 
             data = excel_checker.check_excel_columns(excel_file_path)
             
-            # Vérifier si les colonnes LinkedIn sont présentes dans les données
+            # Vérifier la colonne LinkedIn dans le df
             if 'LinkedIn' not in data.columns:
-                data['LinkedIn'] = None  # Si les colonnes LinkedIn ne sont pas présentes, les initialiser avec None
+                data['LinkedIn'] = None
             
             # Diviser le DataFrame en petits sous-DataFrames
             chunk_size = config_data.get("chunk_size")
             chunks = chunk_dataframe(data, chunk_size)
+            print(f"Nombre de chunks : {len(chunks)}")
             
             # Appliquer la fonction sur chaque sous-DataFrame et concaténer les résultats
             result_frames = []
-            for chunk in chunks:
-                result_frames.append(url_finder.generate_linkedin_urls(chunk))
+            for i, chunk in enumerate(chunks):
+                 print(f"Traitement du chunk {i+1}/{len(chunks)}...")
+                 result_frames.append(url_finder.generate_linkedin_urls(chunk))
+                 print(f"Chunk {i+1} traité. URLs LinkedIn générées : {len(result_frames[-1])}")
+            
+            print("Assemblage des dataframes...")
             df_with_links = pd.concat(result_frames)
-            
+
             # Afficher le DataFrame avec les liens LinkedIn
-            print(df_with_links)
+            print(f"Dimentions df with links : {df_with_links}")
             
-            # Enregistrer le DataFrame avec les liens LinkedIn dans un fichier Excel
-            output_file_path = config_data.get("output_file_path")
+            # Enregistrer les résultats dans un fichier Excel
             df_with_links.to_excel(output_file_path, index=False)
             print(f"Les résultats ont été enregistrés dans : {output_file_path}")
         else:
