@@ -2,15 +2,16 @@ import logging
 from scripts import excel_checker
 from scripts import url_finder
 import pandas as pd
+import math
 
-def chunk_dataframe(df, chunk_size):
+# decouper le df pour avoir  moins de 10 lignes par chunk
+def chunk_dataframe(df, max_lines=10):
+    chunk_size = math.ceil(len(df) / math.ceil(len(df) / max_lines))
     chunks = []
-    num_chunks = len(df) // chunk_size + 1
-    for i in range(num_chunks):
-        start = i * chunk_size
-        end = (i + 1) * chunk_size
-        chunks.append(df[start:end])
+    for i in range(0, len(df), chunk_size):
+        chunks.append(df[i:i + chunk_size])
     return chunks
+
 
 def main():
     config_file_path = "conf/config.json"
@@ -29,7 +30,7 @@ def main():
             
             # Diviser le DataFrame en petits sous-DataFrames
             chunk_size = config_data.get("chunk_size")
-            chunks = chunk_dataframe(data, chunk_size)
+            chunks = chunk_dataframe(data)
             print(f"Nombre de chunks : {len(chunks)}")
             
             # Appliquer la fonction sur chaque sous-DataFrame et concaténer les résultats
