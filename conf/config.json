@@ -1,4 +1,5 @@
 {
-    "excel_file_path": "data/file.xlsx"
+    "excel_file_path": "data/file.xlsx",
+    "output_file_path" : "res/output.xlsx"
 }
   
