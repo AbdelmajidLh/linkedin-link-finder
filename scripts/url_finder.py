@@ -29,12 +29,6 @@ def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise, max_retries
                 time.sleep(5)  # Attendre quelques secondes avant de réessayer
     return None
 
-
-
-def generate_linkedin_urls(data):
-    if isinstance(data, pd.DataFrame):
-        data = data.copy()  # Copie des données pour éviter de modifier les données d'origine
-        data['LinkedIn'] = data.apply(lambda row: find_linkedin_url(row['Nom'], row['Fonction'], row['Plateforme ou pôle'], row['Entreprise']), axis=1)
-        return data
-    else:
-        raise ValueError("Les données doivent être un DataFrame.")
+def generate_linkedin_urls(data_chunk):
+    data_chunk['LinkedIn'] = data_chunk.apply(lambda row: find_linkedin_url(row['Nom'], row['Fonction'], row['Plateforme ou pôle'], row['Entreprise']), axis=1)
+    return data_chunk
