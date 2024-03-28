@@ -1,5 +1,32 @@
 {
-    "excel_file_path": "data/file.xlsx",
-    "output_file_path" : "res/output.xlsx"
+    "__input file": "Fichier input",
+    "excel_file_path": "data/file_all.xlsx",
+
+    "__output file": "Fichier output",
+    "output_file_path" : "res/output_all.xlsx",
+
+    "__Number of lines": "nombre de lignes par sous dataframe",
+    "nrow" : 12,
+
+    "__Temps d'attente": "Nombre de seconds entre chaque chunk",
+    "time_sleep" : 75,
+
+    "__recherche langue": "langue",
+    "lang" : "fr",
+
+    "__nombre de resultats par page": "Number of results per page",
+    "num":10,
+
+    "__nombre de requetes par nom": "Nombre de tentatives par ligne",
+    "max_retries":1,
+
+    "__premier resultat": "Premier résultat à récupérer",
+    "start" : 0,
+
+    "__stop": "Dernier résultat à récupérer",
+    "stop":1,
+
+    "__pause entre chaque requete": "Nécessaire pour contourner les limites de Google",
+    "pause" : 3
 }
   

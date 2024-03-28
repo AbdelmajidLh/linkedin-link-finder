@@ -16,12 +16,14 @@ def main():
         config_data = excel_checker.load_config(config_file_path)
         excel_file_path = config_data.get("excel_file_path")
         output_file_path = config_data.get("output_file_path")
+        nrow = config_data.get("nrow")
+        time_sleep = config_data.get("time_sleep")
         if excel_file_path:
             # Vérifier les colonnes Excel et obtenir les données sous forme de DataFrame
             data = excel_checker.check_excel_columns(excel_file_path)
 
             # Découper le DataFrame en chunks de 10 lignes
-            chunks = [data.iloc[i:i + 10] for i in range(0, data.shape[0], 10)]
+            chunks = [data.iloc[i:i + nrow] for i in range(0, data.shape[0], nrow)]
 
             # Initialiser le DataFrame pour les résultats
             df_with_links = pd.DataFrame()
@@ -32,14 +34,14 @@ def main():
                 df_with_links = pd.concat([df_with_links, updated_chunk], ignore_index=True)
 
                 # Attendre 2 minutes entre chaque chunk
-                time.sleep(120)
+                time.sleep(time_sleep)
 
             # Afficher le DataFrame avec les liens LinkedIn
-            print(df_with_links)
+            logging.info(df_with_links)
 
             # Enregistrer le DataFrame avec les liens LinkedIn dans un fichier Excel
             df_with_links.to_excel(output_file_path, index=False)
-            print(f"Les résultats ont été enregistrés dans : {output_file_path}")
+            logging.info(f"Les résultats ont été enregistrés dans : {output_file_path}")
         else:
             logging.error("Chemin du fichier Excel non spécifié dans le fichier de configuration.")
     except Exception as e:
