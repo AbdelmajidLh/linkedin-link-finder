@@ -24,7 +24,7 @@ def main():
             print(df_with_links)
             
             # Enregistrer le DataFrame avec les liens LinkedIn dans un fichier Excel
-            output_file_path = "linkedin_links.xlsx"  # Chemin vers le fichier de sortie
+            output_file_path = "res/output.xlsx"  # Chemin vers le fichier de sortie
             df_with_links.to_excel(output_file_path, index=False)
             print(f"Les résultats ont été enregistrés dans : {output_file_path}")
         else:
