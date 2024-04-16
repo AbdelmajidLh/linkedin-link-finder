@@ -4,5 +4,6 @@ data/*.xlsx
 .google-cookie
 */*.old
 res/
+mon_environnement/
 *Copie/
 *.xlsx
