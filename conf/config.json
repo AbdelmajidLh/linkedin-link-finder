@@ -1,15 +1,15 @@
 {
     "__input file": "Fichier input",
-    "excel_file_path": "data/file_all.xlsx",
+    "excel_file_path": "C:/Users/aelh/OneDrive - ALAN ALLMAN ASSOCIATES/Bureau/Git/BPCE/res/Prospection_v20240416.xlsx",
 
     "__output file": "Fichier output",
-    "output_file_path" : "res/output_all.xlsx",
+    "output_file_path" : "C:/Users/aelh/OneDrive - ALAN ALLMAN ASSOCIATES/Bureau/Git/BPCE/res/Prospection_v20240416_urls.xlsx",
 
     "__Number of lines": "nombre de lignes par sous dataframe",
-    "nrow" : 12,
+    "nrow" : 60,
 
     "__Temps d'attente": "Nombre de seconds entre chaque chunk",
-    "time_sleep" : 75,
+    "time_sleep" : 15,
 
     "__recherche langue": "langue",
     "lang" : "fr",

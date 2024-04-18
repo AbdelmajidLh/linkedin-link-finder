@@ -1,5 +1,5 @@
 import logging
-from scripts import excel_checker, url_finder
+from scripts import excel_checker, url
 import pandas as pd
 import time
 
@@ -30,7 +30,8 @@ def main():
 
             # Traiter chaque chunk
             for chunk in chunks:
-                updated_chunk = url_finder.generate_linkedin_urls(chunk)
+                #updated_chunk = url_finder.generate_linkedin_urls(chunk)
+                updated_chunk = url.generate_linkedin_urls(chunk)
                 df_with_links = pd.concat([df_with_links, updated_chunk], ignore_index=True)
 
                 # Attendre 2 minutes entre chaque chunk
