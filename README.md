@@ -16,12 +16,15 @@ LinkedIn URL Finder is a Python-based tool designed to automate the process of s
 - **Parallel Processing**: Utilizes multi-threading to speed up the search process across multiple data chunks.
 - **Configurable**: Allows customization through a JSON configuration file.
 - **Logging**: Provides detailed logs for monitoring the program's progress and troubleshooting issues.
+- **easy to use**: You can run the script on your Windows machine without installing Python.
 
 ## Requirements
 
 - Python 3.6 or higher
 - `pandas` library
-- `googlesearch-python` library
+- `openpyxl` library
+- `pandas==2.2.2` library
+- `requests==2.31.0` library
 
 ## Installation
 
@@ -45,22 +48,25 @@ Edit the `conf/config.json` file to set up your configuration:
 ```json
 {
     "excel_file_path": "path/to/your/excel/file.xlsx",
-    "output_file_path": "path/to/your/output/file.xlsx",
-    "chunk_size": 10
+    "output_file_path": "path/to/your/output/file.xlsx"
 }
 ```
 
-- `excel_file_path`: The path to the Excel file containing the data.
-- `output_file_path`: The path where the output Excel file with LinkedIn URLs will be saved.
-- `chunk_size`: The number of rows each data chunk should contain (optional).
+- `excel_file_path`: The path to the Excel file containing the data (on windows, use the slash `/` instead of anti-slash `\`).
+- `output_file_path`: The path where the output Excel file with LinkedIn URLs will be saved [optional].
 
-## Usage
+## Usage 
+### Unix or Windows with Python installed
 
 Run the main script from the command line:
 
 ```bash
 python main.py
 ```
+
+### On Windows
+Double click on the Python application.
+
 
 The program will read the Excel file, process the data in chunks, and save the results with LinkedIn URLs in the specified output file.
 

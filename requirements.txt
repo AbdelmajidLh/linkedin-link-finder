@@ -1,8 +1,3 @@
-logging
-json
-os
-pandas
-google
-urllib
-time
 openpyxl
+pandas==2.2.2
+requests==2.31.0
