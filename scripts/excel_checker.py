@@ -2,9 +2,20 @@ import logging
 import pandas as pd
 import os
 import json
+#import openpyxl
 
 # Configuration du système de logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Chemin vers le fichier de logs
+LOG_FILE_PATH = "logs.log"
+
+# Ajout d'un handler pour écrire les logs dans un fichier externe
+file_handler = logging.FileHandler(filename=LOG_FILE_PATH)
+file_handler.setLevel(logging.INFO)  # Définir le niveau de log pour le handler
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+logging.getLogger().addHandler(file_handler)
+
 
 # load config
 def load_config(config_file_path):
@@ -46,4 +57,4 @@ def check_excel_columns(excel_file_path):
     
     logging.info("Toutes les colonnes requises sont présentes dans le fichier Excel.")
     
-    return df  # Retourner le DataFrame même si aucune colonne n'est manquante
+    return df

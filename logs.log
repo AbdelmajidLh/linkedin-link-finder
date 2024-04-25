@@ -1,0 +1,116 @@
+2024-04-25 16:56:30,655 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:56:30,655 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:56:30,655 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:56:30,655 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:56:30,655 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:56:30,655 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:56:30,655 - INFO - Vérification du fichier Excel : input_file.xlsx
+2024-04-25 16:56:30,655 - INFO - Vérification du fichier Excel : input_file.xlsx
+2024-04-25 16:56:30,655 - ERROR - Le fichier Excel input_file.xlsx n'existe pas.
+2024-04-25 16:56:30,655 - ERROR - Le fichier Excel input_file.xlsx n'existe pas.
+2024-04-25 16:56:30,655 - ERROR - Une erreur est survenue :
+Traceback (most recent call last):
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\main.py", line 35, in main
+    data = excel_checker.check_excel_columns(excel_file_path)
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\scripts\excel_checker.py", line 38, in check_excel_columns
+    raise FileNotFoundError(f"Le fichier Excel {excel_file_path} n'existe pas.")
+FileNotFoundError: Le fichier Excel input_file.xlsx n'existe pas.
+2024-04-25 16:56:30,655 - ERROR - Une erreur est survenue :
+Traceback (most recent call last):
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\main.py", line 35, in main
+    data = excel_checker.check_excel_columns(excel_file_path)
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\scripts\excel_checker.py", line 38, in check_excel_columns
+    raise FileNotFoundError(f"Le fichier Excel {excel_file_path} n'existe pas.")
+FileNotFoundError: Le fichier Excel input_file.xlsx n'existe pas.
+2024-04-25 16:56:30,655 - INFO - Temps d'exécution du programme : 0.0 minutes.
+2024-04-25 16:56:30,655 - INFO - Temps d'exécution du programme : 0.0 minutes.
+2024-04-25 16:57:37,850 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:57:37,850 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:57:37,851 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:57:37,851 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:57:37,851 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:57:37,851 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:57:37,852 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-25 16:57:37,852 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-25 16:57:38,404 - INFO - Les premières lignes du DataFrame :
+2024-04-25 16:57:38,404 - INFO - Les premières lignes du DataFrame :
+2024-04-25 16:57:38,404 - INFO -                       Nom                     Fonction                                 Plateforme ou pôle Entreprise  LinkedIn
+0          BARATIER LUCIE  Régalien risques & finances  PLATEFORME FICE & RISQUES - FICE & REPORTING R...       BPCE       NaN
+1        LAFAURIE NICOLAS     Pilotage Synthèse & Data                        PLATEFORME SEF - DSI FACTOR       BPCE       NaN
+2         RUDLOFF CORINNE             Achats Directeur                               POLE FICE & PILOTAGE       BPCE       NaN
+3        SARRAZIN OLIVIER       Chèques & prélèvements  PLATEFORME SERVICES BANCAIRES - PAIEMENT - SER...       BPCE       NaN
+4  DURAND PIERRE-EMMANUEL                    Directeur                PLATEFORME ESPACE CLIENT, DATA & IA       BPCE       NaN
+2024-04-25 16:57:38,404 - INFO -                       Nom                     Fonction                                 Plateforme ou pôle Entreprise  LinkedIn
+0          BARATIER LUCIE  Régalien risques & finances  PLATEFORME FICE & RISQUES - FICE & REPORTING R...       BPCE       NaN
+1        LAFAURIE NICOLAS     Pilotage Synthèse & Data                        PLATEFORME SEF - DSI FACTOR       BPCE       NaN
+2         RUDLOFF CORINNE             Achats Directeur                               POLE FICE & PILOTAGE       BPCE       NaN
+3        SARRAZIN OLIVIER       Chèques & prélèvements  PLATEFORME SERVICES BANCAIRES - PAIEMENT - SER...       BPCE       NaN
+4  DURAND PIERRE-EMMANUEL                    Directeur                PLATEFORME ESPACE CLIENT, DATA & IA       BPCE       NaN
+2024-04-25 16:57:38,436 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-25 16:57:38,436 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-25 16:57:38,437 - ERROR - Une erreur est survenue :
+Traceback (most recent call last):
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\main.py", line 46, in main
+    updated_chunk = url_finder.generate_linkedin_urls(chunk)
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\scripts\url_finder.py", line 45, in generate_linkedin_urls
+    logging.info("Génération des URLs LinkedIn pour le DataFrame.")
+NameError: name 'logging' is not defined
+2024-04-25 16:57:38,437 - ERROR - Une erreur est survenue :
+Traceback (most recent call last):
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\main.py", line 46, in main
+    updated_chunk = url_finder.generate_linkedin_urls(chunk)
+  File "c:\Users\aelh\OneDrive - ALAN ALLMAN ASSOCIATES\Bureau\Git\linkedin-link-finder\scripts\url_finder.py", line 45, in generate_linkedin_urls
+    logging.info("Génération des URLs LinkedIn pour le DataFrame.")
+NameError: name 'logging' is not defined
+2024-04-25 16:57:38,439 - INFO - Temps d'exécution du programme : 0.0098105788230896 minutes.
+2024-04-25 16:57:38,439 - INFO - Temps d'exécution du programme : 0.0098105788230896 minutes.
+2024-04-25 16:58:17,154 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:58:17,154 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-25 16:58:17,154 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:58:17,154 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-25 16:58:17,154 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:58:17,154 - INFO - Fichier de configuration chargé avec succès.
+2024-04-25 16:58:17,154 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-25 16:58:17,154 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-25 16:58:17,469 - INFO - Les premières lignes du DataFrame :
+2024-04-25 16:58:17,469 - INFO - Les premières lignes du DataFrame :
+2024-04-25 16:58:17,469 - INFO -                       Nom                     Fonction                                 Plateforme ou pôle Entreprise  LinkedIn
+0          BARATIER LUCIE  Régalien risques & finances  PLATEFORME FICE & RISQUES - FICE & REPORTING R...       BPCE       NaN
+1        LAFAURIE NICOLAS     Pilotage Synthèse & Data                        PLATEFORME SEF - DSI FACTOR       BPCE       NaN
+2         RUDLOFF CORINNE             Achats Directeur                               POLE FICE & PILOTAGE       BPCE       NaN
+3        SARRAZIN OLIVIER       Chèques & prélèvements  PLATEFORME SERVICES BANCAIRES - PAIEMENT - SER...       BPCE       NaN
+4  DURAND PIERRE-EMMANUEL                    Directeur                PLATEFORME ESPACE CLIENT, DATA & IA       BPCE       NaN
+2024-04-25 16:58:17,469 - INFO -                       Nom                     Fonction                                 Plateforme ou pôle Entreprise  LinkedIn
+0          BARATIER LUCIE  Régalien risques & finances  PLATEFORME FICE & RISQUES - FICE & REPORTING R...       BPCE       NaN
+1        LAFAURIE NICOLAS     Pilotage Synthèse & Data                        PLATEFORME SEF - DSI FACTOR       BPCE       NaN
+2         RUDLOFF CORINNE             Achats Directeur                               POLE FICE & PILOTAGE       BPCE       NaN
+3        SARRAZIN OLIVIER       Chèques & prélèvements  PLATEFORME SERVICES BANCAIRES - PAIEMENT - SER...       BPCE       NaN
+4  DURAND PIERRE-EMMANUEL                    Directeur                PLATEFORME ESPACE CLIENT, DATA & IA       BPCE       NaN
+2024-04-25 16:58:17,481 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-25 16:58:17,481 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-25 16:58:17,481 - INFO - Génération des URLs LinkedIn pour le DataFrame.
+2024-04-25 16:58:17,481 - INFO - Génération des URLs LinkedIn pour le DataFrame.
+2024-04-25 16:58:17,487 - INFO - Recherche de l'URL LinkedIn pour BARATIER LUCIE.
+2024-04-25 16:58:17,487 - INFO - Recherche de l'URL LinkedIn pour BARATIER LUCIE.
+2024-04-25 16:58:18,063 - INFO - Recherche de l'URL LinkedIn pour LAFAURIE NICOLAS.
+2024-04-25 16:58:18,063 - INFO - Recherche de l'URL LinkedIn pour LAFAURIE NICOLAS.
+2024-04-25 16:58:18,522 - INFO - Recherche de l'URL LinkedIn pour RUDLOFF CORINNE.
+2024-04-25 16:58:18,522 - INFO - Recherche de l'URL LinkedIn pour RUDLOFF CORINNE.
+2024-04-25 16:58:18,950 - INFO - Recherche de l'URL LinkedIn pour SARRAZIN OLIVIER.
+2024-04-25 16:58:18,950 - INFO - Recherche de l'URL LinkedIn pour SARRAZIN OLIVIER.
+2024-04-25 16:58:19,395 - INFO - Recherche de l'URL LinkedIn pour DURAND PIERRE-EMMANUEL.
+2024-04-25 16:58:19,395 - INFO - Recherche de l'URL LinkedIn pour DURAND PIERRE-EMMANUEL.
+2024-04-25 16:58:20,122 - INFO - Recherche de l'URL LinkedIn pour AMATO JEAN-FRANÇOIS.
+2024-04-25 16:58:20,122 - INFO - Recherche de l'URL LinkedIn pour AMATO JEAN-FRANÇOIS.
+2024-04-25 16:58:20,651 - INFO - Recherche de l'URL LinkedIn pour FRICOTTEAU ANAUD.
+2024-04-25 16:58:20,651 - INFO - Recherche de l'URL LinkedIn pour FRICOTTEAU ANAUD.
+2024-04-25 16:58:21,182 - INFO - Recherche de l'URL LinkedIn pour BEAUCOURT YANNICK.
+2024-04-25 16:58:21,182 - INFO - Recherche de l'URL LinkedIn pour BEAUCOURT YANNICK.
+2024-04-25 16:58:21,698 - INFO - Recherche de l'URL LinkedIn pour MARTIN TOMY.
+2024-04-25 16:58:21,698 - INFO - Recherche de l'URL LinkedIn pour MARTIN TOMY.
+2024-04-25 16:58:22,245 - INFO - Recherche de l'URL LinkedIn pour DELBART VINCENT.
+2024-04-25 16:58:22,245 - INFO - Recherche de l'URL LinkedIn pour DELBART VINCENT.
+2024-04-25 16:58:22,777 - INFO - Recherche de l'URL LinkedIn pour DOUCET NICOLAS.
+2024-04-25 16:58:22,777 - INFO - Recherche de l'URL LinkedIn pour DOUCET NICOLAS.
+2024-04-25 16:58:23,245 - INFO - Recherche de l'URL LinkedIn pour MONCLA VÉRONIQUE.
+2024-04-25 16:58:23,245 - INFO - Recherche de l'URL LinkedIn pour MONCLA VÉRONIQUE.

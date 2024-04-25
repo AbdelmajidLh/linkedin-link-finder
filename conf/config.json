@@ -1,9 +1,9 @@
 {
     "__input file": "Fichier input",
-    "excel_file_path": "input_file.xlsx",
+    "excel_file_path": "data/input_file.xlsx",
 
     "__output file": "Fichier output",
-    "output_file_path" : "output_file.xlsx",
+    "output_file_path" : "res/output_file.xlsx",
 
     "__Number of lines": "nombre de lignes par sous dataframe",
     "nrow" : 60,

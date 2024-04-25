@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 import time
+import logging
 
 # Fonction pour trouver l'URL LinkedIn avec gestion des erreurs 429
 def find_linkedin_url(nom, fonction, plateforme_ou_pole, entreprise, max_retries=3):
