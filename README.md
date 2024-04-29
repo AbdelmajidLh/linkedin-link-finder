@@ -64,7 +64,7 @@ Run the main script from the command line:
 python main.py
 ```
 On Vscode, right click and run script (see screenshot)
-![Run in VSCode](../src/img/run_vscode.png)
+![Run in VSCode](src/img/run_vscode.png)
 
 
 ### On Windows
