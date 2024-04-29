@@ -144,3 +144,37 @@ NameError: name 'logging' is not defined
 2024-04-29 11:20:49,725 - INFO - INFOS - Les résultats ont été enregistrés dans : res/output_file.xlsx
 2024-04-29 11:20:49,725 - INFO - Temps d'exécution du programme : 0.27477976083755495 minutes.
 2024-04-29 11:20:49,725 - INFO - Temps d'exécution du programme : 0.27477976083755495 minutes.
+2024-04-29 13:22:23,875 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-29 13:22:23,875 - INFO - INFOS - Début du traitement du fichier Excel.
+2024-04-29 13:22:23,875 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-29 13:22:23,875 - INFO - Chargement du fichier de configuration : conf/config.json
+2024-04-29 13:22:23,875 - INFO - Fichier de configuration chargé avec succès.
+2024-04-29 13:22:23,875 - INFO - Fichier de configuration chargé avec succès.
+2024-04-29 13:22:23,875 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-29 13:22:23,875 - INFO - Vérification du fichier Excel : data/input_file.xlsx
+2024-04-29 13:22:24,048 - INFO - Les premières lignes du DataFrame :
+2024-04-29 13:22:24,048 - INFO - Les premières lignes du DataFrame :
+2024-04-29 13:22:24,048 - INFO -                  Nom                   Fonction  Plateforme ou pôle        Entreprise  LinkedIn
+0  Abdelmajid EL HOU  Data Engineer & Scientist                 NaN  Siderlog Conseil       NaN
+2024-04-29 13:22:24,048 - INFO -                  Nom                   Fonction  Plateforme ou pôle        Entreprise  LinkedIn
+0  Abdelmajid EL HOU  Data Engineer & Scientist                 NaN  Siderlog Conseil       NaN
+2024-04-29 13:22:24,065 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-29 13:22:24,065 - INFO - Toutes les colonnes requises sont présentes dans le fichier Excel.
+2024-04-29 13:22:24,065 - INFO - Génération des URLs LinkedIn pour le DataFrame.
+2024-04-29 13:22:24,065 - INFO - Génération des URLs LinkedIn pour le DataFrame.
+2024-04-29 13:22:24,065 - INFO - Recherche de l'URL LinkedIn pour Abdelmajid EL HOU.
+2024-04-29 13:22:24,065 - INFO - Recherche de l'URL LinkedIn pour Abdelmajid EL HOU.
+2024-04-29 13:22:25,213 - INFO - URLs LinkedIn générées avec succès.
+2024-04-29 13:22:25,213 - INFO - URLs LinkedIn générées avec succès.
+2024-04-29 13:22:40,214 - INFO -                  Nom                   Fonction  ...        Entreprise                           LinkedIn
+0  Abdelmajid EL HOU  Data Engineer & Scientist  ...  Siderlog Conseil  https://fr.linkedin.com/in/aelhou
+
+[1 rows x 5 columns]
+2024-04-29 13:22:40,214 - INFO -                  Nom                   Fonction  ...        Entreprise                           LinkedIn
+0  Abdelmajid EL HOU  Data Engineer & Scientist  ...  Siderlog Conseil  https://fr.linkedin.com/in/aelhou
+
+[1 rows x 5 columns]
+2024-04-29 13:22:40,260 - INFO - INFOS - Les résultats ont été enregistrés dans : res/output_file.xlsx
+2024-04-29 13:22:40,260 - INFO - INFOS - Les résultats ont été enregistrés dans : res/output_file.xlsx
+2024-04-29 13:22:40,260 - INFO - Temps d'exécution du programme : 0.2730885227521261 minutes.
+2024-04-29 13:22:40,260 - INFO - Temps d'exécution du programme : 0.2730885227521261 minutes.

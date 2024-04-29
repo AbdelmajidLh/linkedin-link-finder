@@ -56,10 +56,14 @@ Edit the `conf/config.json` file to set up your configuration:
 - `output_file_path`: The path where the output Excel file with LinkedIn URLs will be saved [optional].
 
 ## Usage 
+
 ### Unix or Windows with Python installed
+1. install requirements
+```bash
+pip install -r requirements.txt
+```
 
-Run the main script from the command line:
-
+2. Run the main script from the command line:
 ```bash
 python main.py
 ```
@@ -68,14 +72,15 @@ On Vscode, right click and run script (see screenshot)
 
 
 ### On Windows
-Double click on the Python application.
+Double click on the Python application `main.exe`.
 
+The program will read the Excel file, process the data in chunks, and save the results with LinkedIn URLs in the specified output file (`res/your_file.xlsx`).
 
-The program will read the Excel file, process the data in chunks, and save the results with LinkedIn URLs in the specified output file.
+T generate the `exe` file, double click on the `Windows/apk_builder.bat` file.
 
 ## Logging
 
-Logs are saved in the `logs` directory. Check the logs for detailed information about the program's execution and any errors encountered.
+Logs are saved in the `logs` file. Check the logs for detailed information about the program's execution and any errors encountered.
 
 ## Contributing
 

@@ -4,3 +4,8 @@ mon_environnement/
 .google-cookie
 */*.old
 res/*.xlsx
+
+# Windows build apk
+Windows/build/
+Windows/*.spec
+Windows/mon_env/
