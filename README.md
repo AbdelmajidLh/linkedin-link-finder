@@ -63,6 +63,9 @@ Run the main script from the command line:
 ```bash
 python main.py
 ```
+On Vscode, right click and run script (see screenshot)
+![Run in VSCode](../src/img/run_vscode.png)
+
 
 ### On Windows
 Double click on the Python application.
