@@ -1,4 +1,8 @@
-openpyxl
+PyPDF2
+openai
 pandas==2.2.2
+beautifulsoup4
+openpyxl
 requests==2.31.0
 pyinstaller
+python-dotenv==1.0.1

@@ -1,32 +1,16 @@
 {
-    "__input file": "Fichier input",
+    "api_key_path": "conf/api_key.txt",
     "excel_file_path": "data/input_file.xlsx",
-
-    "__output file": "Fichier output",
-    "output_file_path" : "res/output_file.xlsx",
-
-    "__Number of lines": "nombre de lignes par sous dataframe",
-    "nrow" : 60,
-
-    "__Temps d'attente": "Nombre de seconds entre chaque chunk",
-    "time_sleep" : 15,
-
-    "__recherche langue": "langue",
-    "lang" : "fr",
-
-    "__nombre de resultats par page": "Number of results per page",
-    "num":10,
-
-    "__nombre de requetes par nom": "Nombre de tentatives par ligne",
-    "max_retries":1,
-
-    "__premier resultat": "Premier résultat à récupérer",
-    "start" : 0,
-
-    "__stop": "Dernier résultat à récupérer",
-    "stop":1,
-
-    "__pause entre chaque requete": "Nécessaire pour contourner les limites de Google",
-    "pause" : 3
+    "output_file_path": "res/output_file.xlsx",
+    "pdf_path": "data/bpceSi_organigramme.pdf",
+    "prompt_template_path": "prompts/prompt_template.txt",
+    "nrow": 60,
+    "time_sleep": 15,
+    "lang": "fr",
+    "num": 10,
+    "max_retries": 1,
+    "start": 0,
+    "stop": 1,
+    "pause": 3,
+    "ignore_gpt_if_excel_exists": true
 }
-  
