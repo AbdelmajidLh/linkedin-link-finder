@@ -1,0 +1,14 @@
+venv/
+mon_environnement/
+*/__pycache__
+.google-cookie
+*/*.old
+res/*.xlsx
+
+# Windows build apk
+Windows/build/
+Windows/*.spec
+Windows/mon_env/
+.env
+data/*.pdf
+data/*.xlsx

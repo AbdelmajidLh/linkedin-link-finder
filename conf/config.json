@@ -1,0 +1,16 @@
+{
+    "api_key_path": "conf/api_key.txt",
+    "excel_file_path": "data/input_file.xlsx",
+    "output_file_path": "res/output_file.xlsx",
+    "pdf_path": "data/bpceSi_organigramme.pdf",
+    "prompt_template_path": "prompts/prompt_template.txt",
+    "nrow": 60,
+    "time_sleep": 15,
+    "lang": "fr",
+    "num": 10,
+    "max_retries": 1,
+    "start": 0,
+    "stop": 1,
+    "pause": 3,
+    "ignore_gpt_if_excel_exists": true
+}
