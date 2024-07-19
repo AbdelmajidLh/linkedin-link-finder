@@ -12,3 +12,4 @@ Windows/mon_env/
 .env
 data/*.pdf
 data/*.xlsx
+res/*.txt
