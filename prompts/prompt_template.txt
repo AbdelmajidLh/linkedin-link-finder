@@ -1,1 +1,0 @@
-Convert the following text to a structured Excel format with columns: "Nom", "Fonction", "Plateforme ou pôle", "Entreprise", "LinkedIn":
