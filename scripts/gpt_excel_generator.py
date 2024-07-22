@@ -11,7 +11,7 @@ class GPTExcelGenerator:
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def obtenir_reponse_chatgpt(self, prompt):
-        retries = 5
+        retries = 10  # Augmenter le nombre de tentatives
         for i in range(retries):
             try:
                 response = self.client.chat.completions.create(
@@ -24,8 +24,9 @@ class GPTExcelGenerator:
                 )
                 return response.choices[0].message['content'].strip()
             except openai.RateLimitError as e:
-                logging.warning(f"Rate limit exceeded. Retrying in {2 ** i} seconds...")
-                time.sleep(2 ** i)
+                wait_time = 2 ** i  # Délai exponentiel
+                logging.warning(f"Rate limit exceeded. Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
             except openai.APIError as e:
                 logging.error(f"OpenAI API returned an API Error: {e}")
                 raise e
